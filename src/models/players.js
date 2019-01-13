@@ -1,30 +1,8 @@
 'use strict';
 
-const playersModel = require('./players-schema.js');
+const Model = require('./model.js');
+const schema = require('./players-schema.js');
 
-class Players {
+class Players extends Model {}
 
-  constructor() {
-  }
-
-  get(_id) {
-    let queryObject = _id ? {_id} : {};
-    return playersModel.find(queryObject);
-  }
-  
-  post(record) {
-    let newRecord = new playersModel(record);
-    return newRecord.save();
-  }
-
-  put(_id, record) {
-    return playersModel.findByIdAndUpdate(_id, record, {new:true});
-  }
-
-  delete(_id) {
-    return playersModel.findByIdAndDelete(_id);
-  }
-
-}
-
-module.exports = Players;
+module.exports = new Players(schema);
