@@ -11,7 +11,7 @@
     "testEnvironment": "node"
   },
   "keywords": [],
-  "author": "",
+  "authors": "George Raymond & Siobhan Niess",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

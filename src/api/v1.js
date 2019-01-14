@@ -45,7 +45,7 @@ function handleGetOne(req,res,next) {
 
 function handlePost(req,res,next) {
   console.log('post');
-  console.log(req.body);
+  console.log(req.body); 
   req.model.post(req.body)
     .then( result => res.status(200).json(result) )
     .catch( next );
